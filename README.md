@@ -78,7 +78,7 @@ cd /home/ubuntu
 ```
 
 ```sh
-git clone https://github.com/saasscaleup/nodejs-ssl-server.git
+git clone https://github.com/Saimon-bd/node_js_deployment.git
 ```
 
 ### 5. Run node app.js  (Make sure everything working)
@@ -100,14 +100,14 @@ node app.js
 npm install -g pm2 # may require sudo
 ```
 
-### 7. Starting the app with pm2 (Run nodejs in background and when server restart)
+### 7. Starting the app with pm2 (Run Node.js in the background and when the Server restarts)
 ```sh
 pm2 start app.js --name=nodejs-ssl-server
 ```
 ```sh
 pm2 save     # saves the running processes
-                  # if not saved, pm2 will forget
-                  # the running apps on next boot
+                  # If not saved, pm2 will forget
+                  # The running apps on the next boot
 ```
 
 #### 7.1 IMPORTANT: If you want pm2 to start on system boot
@@ -153,9 +153,9 @@ sudo service nginx restart
 #### You should now be able to visit your IP with no port (port 80) and see your app. Now let's add a domain
 
 ### 9 Add domain in goDaddy.com
-If you have domain, you can add A record to your EC2 instance IP with a new subdomain as I'm going to show you next
+If you have a domain, you can add A record to your EC2 instance IP with a new subdomain as I'm going to show you next
 
-#### 9.1 Check that Port 80 redirect to Nodejs server
+#### 9.1 Check that Port 80 redirects to the Nodejs server
 
 ### 10 Installing Free SSL
 
@@ -182,7 +182,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo nano /etc/nginx/sites-available/default
 ```
 
-let edit this line:
+let's edit this line:
 ```sh
 ...
 server_name example.com www.example.com;
